@@ -1,0 +1,14 @@
+{
+  "name": "tetanus2",
+  "version": "0.1.0",
+  "description": "testing neon",
+  "main": "lib/index.js",
+  "author": "jonathanusername <jonathan.j.king@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.9.1"
+  },
+  "scripts": {
+    "install": "neon build"
+  }
+}

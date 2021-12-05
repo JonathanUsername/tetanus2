@@ -1,0 +1,18 @@
+[package]
+name = "tetanus2"
+version = "0.1.0"
+authors = ["jonathanusername <jonathan.j.king@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "tetanus2"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.9.1"
+
+[dependencies]
+neon = "0.9.1"
