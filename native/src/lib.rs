@@ -8,7 +8,7 @@ fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
 fn triangle_single(mut cx: FunctionContext) -> JsResult<JsNumber> {
     let ceil = cx.argument::<JsNumber>(0)?.value();
 
-    let sum: u128 = (0..ceil as u128).sum::<u128>();
+    let sum: u64 = (0..ceil as u64).sum();
     Ok(cx.number(sum as f64))
 }
 
@@ -21,7 +21,7 @@ fn triangle_parallel(mut cx: FunctionContext) -> JsResult<JsNumber> {
 
 register_module!(mut cx, {
     cx.export_function("hello", hello)?;
-    cx.export_function("triangle_single", triangle_single)?;
-    cx.export_function("triangle_parallel", triangle_parallel)?;
+    cx.export_function("rust_triangle_single", triangle_single)?;
+    cx.export_function("rust_triangle_parallel", triangle_parallel)?;
     Ok(())
 });
