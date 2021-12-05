@@ -16,3 +16,4 @@ neon-build = "0.9.1"
 
 [dependencies]
 neon = "0.9.1"
+rayon = "1.5.1"
