@@ -15,7 +15,7 @@ fn triangle_single(mut cx: FunctionContext) -> JsResult<JsNumber> {
 fn triangle_parallel(mut cx: FunctionContext) -> JsResult<JsNumber> {
     let ceil = cx.argument::<JsNumber>(0)?.value();
 
-    let sum: u128 = (0..ceil as u128).into_par_iter().sum::<u128>();
+    let sum: u64 = (0..ceil as u64).into_par_iter().sum();
     Ok(cx.number(sum as f64))
 }
 
